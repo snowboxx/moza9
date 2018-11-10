@@ -21,7 +21,7 @@ function forEachObject(obj, func) {
     Object.keys(obj).forEach(function (key) { func(key, obj[key]) })
 }
 client.on('guildMemberAdd', member => {
-let channel = member.guild.channels.get("500370930778767390");
+let channel = member.guild.channels.get("500370636888211456");
 if (member.user.bot) return;
 var Canvas = require('canvas')
 var jimp = require('jimp')
@@ -104,7 +104,7 @@ const w = ['./welcome.png'];
 })
 });
 
-const devs = ["439187325503930369","332713449215754242"]
+const devs = ["500370636888211456","332713449215754242"]
 
 const adminprefix = "*";
 client.on('message', message => {
