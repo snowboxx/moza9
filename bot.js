@@ -250,6 +250,23 @@ if (message.content.startsWith(prefix + 'setavatar')) {
   }
 }
  });
+
+client.on('guildMemberAdd', member => {
+ let channel = member.guild.channels.get("500370636888211456");
+  // channel: the channel you want to send the welcome message in
+
+  // you can either send a normal message:
+  channel.send(`Welcome ${member}, bla bla bla...`, { // its like sending a normal message, but with some MessageOptions
+    file: 'https://image.ibb.co/dNGVKz/Screenshot_1.png' // this is your image URL
+  });
+
+  // or send it with an embed:
+  let embed = new Discord.RichEmbed()
+    .setTitle("Welcome")
+    .setDescription(`Hi ${member}, bla bla bla...`)
+    .setImage('https://image.ibb.co/dNGVKz/Screenshot_1.png');
+  channel.send({embed});
+});
  
  
 
