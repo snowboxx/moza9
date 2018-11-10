@@ -260,14 +260,7 @@ client.on('guildMemberAdd', member => {
     file: 'https://image.ibb.co/dNGVKz/Screenshot_1.png' // this is your image URL
   });
 
-  // or send it with an embed:
-  let embed = new Discord.RichEmbed()
-    .setTitle("Welcome")
-    .setDescription(`Hi ${member}, bla bla bla...`)
-    .setImage('https://image.ibb.co/dNGVKz/Screenshot_1.png');
-  channel.send({embed});
-});
- 
+
  
 
 client.on('message', async msg => {
